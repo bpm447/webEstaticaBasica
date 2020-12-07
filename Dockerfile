@@ -1,7 +1,6 @@
-FROM ualmtorres/phalcon-apache-ubuntu
-
+FROM httpd:2.4
 ADD index.html /var/www/html
-
+COPY ./public-html/ /usr/local/apache2/htdocs/
 EXPOSE 80
 
-VOLUME /var/www/html
+VOLUME /usr/local/apache2/htdocs/
